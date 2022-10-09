@@ -1,0 +1,97 @@
+header {
+    width: 100vw;
+    min-height: 100vh;
+    background: whitesmoke;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #E3E6F3;
+    max-width: 900px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0.5rem;
+    margin-left: 30rem;
+}
+
+.left {
+    flex-basis: 50%;
+    padding-right: 2rem;
+}
+
+.right {
+    flex-basis: 50%;
+    padding-right: 2rem;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+
+.right input {
+    width: 120px;
+}
+
+form {
+    padding: 1rem;
+}
+
+h3 {
+    margin-top: 1rem;
+    color:#088178; 
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    margin: 0.5rem 0;
+    outline: none;
+}
+
+#zip {
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: space-between;
+}
+
+#zip select {
+    padding: 0.5rem 0.7rem;
+    margin-right: 0.8rem;
+}
+
+#zip input[type="number"] {
+    padding: 0.5rem 0.7rem;
+    margin-left: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    background-color: #088178;
+
+    color: white;
+    border: none;
+    outline: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #496d6a;
+}
+
+#Amount {
+    display: flex;
+    margin-top: 0.5rem;
+    justify-content: space-between;
+    /* width: 50px; */
+    
+}
+
+#Amount input[type="number"] {
+    padding: 0.5rem 0.7rem;
+    margin-left: 5px;
+} 

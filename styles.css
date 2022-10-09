@@ -1,0 +1,1559 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Spartan',sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size:20px;
+    color: #222;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color:#465b52;
+    margin:15px 0 20px 0;
+}
+
+.section-p1 {
+    padding:40px 80px;
+}
+
+.section-m1 {
+    margin:40px 0px;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px; /* top-bottom 15px and left-right 30px*/
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    margin-left: 15px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+button.normal1{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px; /* top-bottom 15px and left-right 30px*/
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    margin-left: 15px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px; /* top-bottom 15px and left-right 30px
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+    margin-bottom: 10px;
+} */
+
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color:transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+body{
+    width:100%;
+}
+
+/* header css  ******************************************************/
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    position: sticky; /*to keep our navbar fixed we use this */
+    top:0;
+    left:0;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.logo {
+    text-decoration: none; /*becoz we have used <a> tag so it comes with a blue line for the href attr so to remove that we use this prop*/
+    font-size: 25px;
+    font-weight: 600;
+    color:#1a1a1a;
+}
+
+#navbar li {
+    list-style: none; /* we remove the dots/bullet points before each item */
+    padding:0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none; /*we remove the underline provided by anchor tag */
+    font-size: 16px;
+    font-weight: 600;
+    color:#1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active{
+    color:#088178; 
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after { /*we use psuedo class concept here */
+    content: "";
+    width:30%;
+    height:2px;
+    background:#088178 ;
+    position: absolute;
+    bottom:-4px;
+    left:20px; 
+}
+
+#mobile{ /*this is for ipad size devices code*/
+    display: none; /*we dont want to display this code for full screen devices*/
+    align-items: center;
+}
+
+#close {
+    display: none; /**we dont want to display the cross btn  for full screen devices*/
+}
+
+#cart_number {
+    background-color: #088178;
+    color: white;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+/************FINAL CART****/
+.wrapper{
+    height: 100%;
+    width: 300px;
+    position: relative;
+}
+.wrapper .menu-btn{
+position: absolute;
+right: 250px;
+top: -18px;
+background: #088178;
+color: #fff;
+height: 40px;
+width: 40px;
+z-index: 9999;
+border: 1px solid #333;
+border-radius: 5px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+transition: all 0.3s ease;
+}
+#btn:checked ~ .menu-btn{
+    right: 250px;
+}
+.wrapper .menu-btn i{
+position: absolute;
+font-size: 23px;
+transition: all 0.3s ease;
+}
+.wrapper .menu-btn i.fa-times{
+opacity: 0;
+}
+#btn:checked ~ .menu-btn i.fa-times{
+opacity: 1;
+
+}
+#btn:checked ~ .menu-btn i.fa-shopping-cart{
+opacity: 0;
+transform: rotate(180deg);
+}
+
+#sidebar{
+width: 420px;
+max-height: 700%;
+position: fixed;
+background: #81a8a6;
+/* height: 70%;
+width: 450px; */
+/* overflow: hidden; */
+right: -2500px;
+transition: all 0.3s ease;
+opacity: 0.9;
+top: 69px;
+border-radius: 10px;
+}
+
+
+#btn:checked ~ #sidebar{
+left: 0;
+}
+#sidebar .title{
+line-height: 65px;
+text-align: center;
+background: #088178;
+font-size: 25px;
+font-weight: 600;
+color: #f2f2f2;
+border-bottom: 1px solid #222;
+}
+
+
+#sidebar table img {
+width: 100px;
+height: 100px;
+}
+
+#sidebar cart-table img {
+    width: 100px;
+}
+ 
+/*we are using this prop becoz we need to give a diff width for each of these*/
+#sidebar table td:nth-child(1){ /*this is for the cross button/icon to give*/
+    width: 100px;
+    text-align: center;
+}
+ 
+#sidebar table td:nth-child(2){ /*this is for the image section*/
+    width: 150px;
+    text-align: center;
+}
+ 
+#sidebar table td:nth-child(3){ /*for the product section where we specify name of product*/
+    width: 250px;
+    text-align: center;
+}
+ 
+#sidebar table td:nth-child(4), /*for price,quantity and sub-total section*/
+#sidebar table td:nth-child(5),
+#sidebar table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+ 
+#sidebar table td:nth-child(5) input { /*this is for the quantity section we are giving a nice padding on each side*/
+                                   /*becoz the default size of the input tag is much more so we minimize that*/
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+ 
+#sidebar table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none; /*to remove the border provided by table tag by default*/
+    border-right: none;
+} 
+ 
+#sidebar table thead td{
+    font-weight: 700;
+    text-transform: uppercase; /*to make all the text in uppercase*/
+    font-size: 13px;
+    padding: 18px 0;
+    /* padding-bottom: 20px; */
+}
+
+#sidebar table tbody tr td{
+    padding-top: 2px;
+}
+
+#sidebar table tbody td{
+    font-size: 13px;
+}
+
+/* .tableClass #Rupees {
+    column-gap: 80px;
+    font-weight: 800;
+    top: 1200px;
+    color: #088178;
+} */
+
+#cartAmount {
+    /* display: flex; */
+    font-weight: 500;
+    text-align: right;
+    margin-right: 150px;
+    margin-bottom: 10px;
+}
+
+  
+/**********************************************************************************/
+/* home page  */
+#hero{
+    background-image: url("img/hero4.png");
+    height:90vh;
+    width:100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column; /*this makes the text arranged in column wise acc to flex prop */
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    color: #088178;
+}
+
+#hero button {
+    background-image: url("img/button.png");
+    background-color: transparent;
+    color:#088178;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* features of our website ********************************************/
+#feature{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    /* flex-wrap:wrap; */
+ 
+}
+ 
+#feature .fe-box{
+    width:200px;
+    text-align: center;
+    padding:25px 15px; /*top-bottom, left-right*/
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border:1px solid #cce7d0;
+    border-radius: 4px;
+    margin:15px 0;
+}
+ 
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+ 
+#feature .fe-box img{
+    width:100%;
+    margin-bottom: 10px;
+}
+ 
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background-color: #fddde4;
+}
+ 
+#feature .fe-box:nth-child(2) h6{ /* to give diff color to each feature */
+    background-color: #d1e8f2;
+}
+ 
+#feature .fe-box:nth-child(3) h6{ /* to give diff color to each feature */
+    background-color: #cdd4f8;
+}
+ 
+#feature .fe-box:nth-child(4) h6{ /* to give diff color to each feature */
+    background-color: #f6dbf6;
+}
+ 
+#feature .fe-box:nth-child(5) h6{ /* to give diff color to each feature */
+    background-color: #fff2e5;
+}
+
+#feature .fe-box:nth-child(6) h6{ /* to give diff color to each feature */
+    background-color: #cce7d0;
+}
+
+/* products css code **********************************************/
+#product1{
+    text-align: center;
+    /* position:-webkit-sticky; */
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown */
+}
+
+#product1 .pro{
+    width:23%;
+    min-width:250px;
+    max-height: 20%;
+    padding:10px 12px;
+    border: 1px solid #cce7d0; /* this gives a nice border of 1px of white color to our box*/ 
+    border-radius:25px; /*this makes the border shape from rectangle to curved around edeges*/
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02); /* x,y,radius and then color are the values */
+    margin: 15px 0; /* first is top-bottom then left-right*/
+    transition: 0.2s ease;
+    /* position: relative; */
+    /* position: static; */
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.09);
+}
+
+#product1 .pro img{
+    width: 280px;
+    height: 280px;
+    width:100%;
+    border-radius:20px;
+    object-fit: cover;
+}
+
+#product1 .pro .description{
+    text-align: start;
+    padding:10px 0;
+}
+
+#product1 .pro .description span{ /*this denotes the text "Allen Solly" used inside span tag*/
+    color: #606063;
+    font-size: 13px;
+}
+
+#product1 .pro .description h5{ /*css code for text "Cartoon Astronaut T-Shirts"*/
+    padding-top: 5px;
+    color:#1a1a1a;
+    font-size: 15px;
+}
+
+#product1 .pro .description i{ /* this css code is for the stars font icon*/
+    font-size: 12px;
+    color:rgb(255,210,3);
+    padding-bottom: 8px;
+}
+
+#product1 .pro .description h4{ /* css code for price */
+    padding-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+
+#product1 .pro .cart{
+    /* width: 40px;
+    height: 40px;
+    line-height: 40px; 
+    border-radius: 50px; 
+    background-color: #e8f6ea; */
+    /* font-weight: 500; */
+    color:#088178;
+    /* border:1px solid #cce7d0; */
+    padding-left: 240px;
+    padding-bottom: 20px;
+    /* position: absolute; /*adding position as aboslute to child elem and relative to it's parent elem to shopping cart icon 
+    bottom: 20px;
+    right:10px; */
+}
+
+
+
+/* ######################### prod 2 */
+
+#product2{
+    text-align: center;
+    /* position:-webkit-sticky; */
+}
+
+#product2 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown */
+}
+
+#product2 .pro{
+    width:23%;
+    min-width:250px;
+    max-height: 20%;
+    padding:10px 12px;
+    border: 1px solid #cce7d0; /* this gives a nice border of 1px of white color to our box*/ 
+    border-radius:25px; /*this makes the border shape from rectangle to curved around edeges*/
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02); /* x,y,radius and then color are the values */
+    margin: 15px 0; /* first is top-bottom then left-right*/
+    transition: 0.2s ease;
+    /* position: relative; */
+    /* position: static; */
+}
+
+#product2 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.09);
+}
+
+#product2 .pro img{
+    width: 280px;
+    height: 280px;
+    width:100%;
+    border-radius:20px;
+    object-fit: cover;
+}
+
+#product2 .pro .description{
+    text-align: start;
+    padding:10px 0;
+}
+
+#product2 .pro .description span{ /*this denotes the text "Allen Solly" used inside span tag*/
+    color: #606063;
+    font-size: 13px;
+}
+
+#product2 .pro .description h5{ /*css code for text "Cartoon Astronaut T-Shirts"*/
+    padding-top: 5px;
+    color:#1a1a1a;
+    font-size: 15px;
+}
+
+#product2 .pro .description i{ /* this css code is for the stars font icon*/
+    font-size: 12px;
+    color:rgb(255,210,3);
+    padding-bottom: 8px;
+}
+
+#product2 .pro .description h4{ /* css code for price */
+    padding-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+
+#product2 .pro .cart{
+    /* width: 40px;
+    height: 40px;
+    line-height: 40px; 
+    border-radius: 50px; 
+    background-color: #e8f6ea; */
+    /* font-weight: 500; */
+    color:#088178;
+    /* border:1px solid #cce7d0; */
+    padding-left: 240px;
+    padding-bottom: 20px;
+    /* position: absolute; /*adding position as aboslute to child elem and relative to it's parent elem to shopping cart icon 
+    bottom: 20px;
+    right:10px; */
+}
+
+
+/* ############################# prod3 */
+
+#product3{
+    text-align: center;
+    /* position:-webkit-sticky; */
+}
+
+#product3 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown */
+}
+
+#product3 .pro{
+    width:23%;
+    min-width:250px;
+    max-height: 20%;
+    padding:10px 12px;
+    border: 1px solid #cce7d0; /* this gives a nice border of 1px of white color to our box*/ 
+    border-radius:25px; /*this makes the border shape from rectangle to curved around edeges*/
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02); /* x,y,radius and then color are the values */
+    margin: 15px 0; /* first is top-bottom then left-right*/
+    transition: 0.2s ease;
+    /* position: relative; */
+    /* position: static; */
+}
+
+#product3 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.09);
+}
+
+#product3 .pro img{
+    width: 280px;
+    height: 280px;
+    width:100%;
+    border-radius:20px;
+    object-fit: cover;
+}
+
+#product3 .pro .description{
+    text-align: start;
+    padding:10px 0;
+}
+
+#product3 .pro .description span{ /*this denotes the text "Allen Solly" used inside span tag*/
+    color: #606063;
+    font-size: 13px;
+}
+
+#product3 .pro .description h5{ /*css code for text "Cartoon Astronaut T-Shirts"*/
+    padding-top: 5px;
+    color:#1a1a1a;
+    font-size: 15px;
+}
+
+#product3 .pro .description i{ /* this css code is for the stars font icon*/
+    font-size: 12px;
+    color:rgb(255,210,3);
+    padding-bottom: 8px;
+}
+
+#product3 .pro .description h4{ /* css code for price */
+    padding-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+
+#product3 .pro .cart{
+    /* width: 40px;
+    height: 40px;
+    line-height: 40px; 
+    border-radius: 50px; 
+    background-color: #e8f6ea; */
+    /* font-weight: 500; */
+    color:#088178;
+    /* border:1px solid #cce7d0; */
+    padding-left: 240px;
+    padding-bottom: 20px;
+    /* position: absolute; /*adding position as aboslute to child elem and relative to it's parent elem to shopping cart icon 
+    bottom: 20px;
+    right:10px; */
+}
+
+
+/* ############################ prod4 */
+
+#product4{
+    text-align: center;
+    /* position:-webkit-sticky; */
+}
+
+#product4 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top:20px;
+    flex-wrap: wrap; /* becoz of this prop of css we break the line after 4 products ie.in a given line only 4 products are shown */
+}
+
+#product4 .pro{
+    width:23%;
+    min-width:250px;
+    max-height: 20%;
+    padding:10px 12px;
+    border: 1px solid #cce7d0; /* this gives a nice border of 1px of white color to our box*/ 
+    border-radius:25px; /*this makes the border shape from rectangle to curved around edeges*/
+    cursor:pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02); /* x,y,radius and then color are the values */
+    margin: 15px 0; /* first is top-bottom then left-right*/
+    transition: 0.2s ease;
+    /* position: relative; */
+    /* position: static; */
+}
+
+#product4 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.09);
+}
+
+#product4 .pro img{
+    width: 280px;
+    height: 280px;
+    width:100%;
+    border-radius:20px;
+    object-fit: cover;
+}
+
+#product4 .pro .description{
+    text-align: start;
+    padding:10px 0;
+}
+
+#product4 .pro .description span{ /*this denotes the text "Allen Solly" used inside span tag*/
+    color: #606063;
+    font-size: 13px;
+}
+
+#product4 .pro .description h5{ /*css code for text "Cartoon Astronaut T-Shirts"*/
+    padding-top: 5px;
+    color:#1a1a1a;
+    font-size: 15px;
+}
+
+#product4 .pro .description i{ /* this css code is for the stars font icon*/
+    font-size: 12px;
+    color:rgb(255,210,3);
+    padding-bottom: 8px;
+}
+
+#product4 .pro .description h4{ /* css code for price */
+    padding-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color:#088178;
+}
+
+#product4 .pro .cart{
+    /* width: 40px;
+    height: 40px;
+    line-height: 40px; 
+    border-radius: 50px; 
+    background-color: #e8f6ea; */
+    /* font-weight: 500; */
+    color:#088178;
+    /* border:1px solid #cce7d0; */
+    padding-left: 240px;
+    padding-bottom: 20px;
+    /* position: absolute; /*adding position as aboslute to child elem and relative to it's parent elem to shopping cart icon 
+    bottom: 20px;
+    right:10px; */
+}
+
+
+
+
+/********************banner section **************************/
+#banner{
+    display: flex;
+    flex-direction: column ;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/banner/b2.jpg);
+    width:100%;
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner h4{
+    color: white;
+    font-size: 16px;
+    /* padding-bottom: 40px; */
+}
+
+#banner h2{
+    color: white;
+    font-size: 30px;
+    padding: 10px 0px; /*top and bottom 10px and left and right 0px*/
+}
+
+#banner span{ /*the 70% appears in red color*/
+    color: red;
+}
+
+#banner button:hover{ 
+    color:#fff;
+    background: #088178;
+}
+
+/*******************banner 1 **********************/
+#sm-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#sm-banner .banner-box{ /*same css code used as banner above one ie. 70% Off one  */
+    display: flex;
+    flex-direction: column; /*contents inside this banner ie.h2,h4,span are placed column wise*/
+    justify-content: center;
+    align-items: flex-end; /*the text will start from begining of line rather than center*/
+    background-image: url(img/banner/capBanner.jpg);
+    min-width:660px;
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    padding:30px;
+}
+
+#sm-banner .banner-box2{ /*same css code used as banner one just background img change */
+
+    background-image: url(img/banner/b7.jpg);
+}
+
+#sm-banner h4{
+    color:rgb(255, 255, 255);
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner h2{
+    color:#000;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+#sm-banner span{
+    color:#fff;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+#sm-banner .banner-box:hover button{
+    background-color: #088178;
+    border: 1px solid #088178;
+}
+
+
+/********************THREE banners in a row css code*************************/
+
+#banner3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column; /*contents inside this banner ie.h2,h4,span are placed column wise*/
+    justify-content: center;
+    align-items: flex-start; /*the text will start from begining of line rather than center*/
+    background-image: url(img/banner/b7.jpg);
+    min-width:30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding:20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2{
+    background-image: url(img/banner/b4.jpg);
+}
+
+#banner3 .banner-box3{
+    background-image: url(img/banner/b18.jpg);
+}
+
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+#banner3 h3{
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/**************NEWSLETTER SECTION*************/
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("img/banner/b14.png");
+    background-repeat: no-repeat;
+    background-position: 20% 30%; /*top-20% and left 30%*/
+    background-color: #041e42;
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color:#fff;
+}
+
+#newsletter p{
+    font-size: 15px;
+    font-weight: 600;
+    color:#818ea0;
+}
+
+#newsletter p span{
+    color:#ffbd27;
+}
+
+#newsletter form{
+    display: flex;
+    width: 40%;
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#newsletter button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/********************8 FOOTER SECTION ************************/
+footer{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    /* margin-bottom: 20px; */
+}
+
+footer .logo{
+    margin-bottom: 30px;
+}
+
+footer h4{
+    font-size: 14px;
+    padding-bottom: 20px;
+}
+
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+
+footer a{
+    font-size: 13px;
+    margin:  0 0 8px 0;
+    text-decoration: none;
+    color: #222;
+    margin-bottom:10px ;
+}
+
+footer .follow{
+    margin-top: 20px;
+}
+
+footer .follow i{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+
+footer .follow i:hover,
+footer a:hover{
+    color: #088178;
+}
+
+.copyright{
+    text-align: center;
+}
+
+/**********USING MEDIA QUERY TO MAKE WEBSITE RESPONSIVE********/
+@media (max-width:800px) {
+    /* .section-p1 {
+        padding: 40px 40px;
+    } */
+
+    .section-p1 {
+        padding: 0px;
+    }
+    #navbar {
+        display: flex;
+        flex-direction: column; /*we make the items list in column wise */
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top:0;
+        right:-300px;/*if right:0px then the section is visible so to hide that and show that only when we click the button we write -300 as value*/
+        height:100vh;
+        width:300px;
+        background-color: #E3E6F3; /* we include these lists in a diff section ie. why we provide a diff background*/
+        box-shadow: 0 40px 60px rgba(0,0,0,0.01);
+        padding: 80px 0 0 10px; /*padding for all the lists top,right,bottom,left*/
+        transition: 0.3s;
+    }
+
+    #navbar.active{
+        right:0px; /* to display our navbar when we click on that outdent icon we change 'right' prop of css from -300 to 0 */
+    }
+
+    #navbar li{
+        margin-bottom: 20px;/*to give spacing between each list*/
+    }
+
+    #mobile{ /*<!-- this is for ipad screen devices*/
+        display: flex;
+        align-items: center;
+    }
+ 
+    #mobile i{ /*we style the shopping and outdent icon some styles */
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close { /*this is for the close icon*/
+        display: initial; /*becoz when we use display:none for full screen devices 
+                           the cross for ipad size also vanishes so we use this prop*/
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #navbar.close_btn { /*to close our sliding navbar */
+        right:-300px;
+    }
+
+    #remove-bag-icon{
+        display: none;
+    }
+
+    #hero { /*the img we see in full-screen device will be minimized here */
+    
+        height: 70vh;
+        background-position: top 30% right 48%;
+        padding: 0 80px;
+    }
+    /*features of our website*/
+    #feature {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+    } 
+
+    /*featured products*/
+    
+
+}
+
+/***********************FOR SMALL SCREEN DEVICES ***********/
+
+/*********************shop page css code*******************/
+/*Shop page */
+#page-header{
+    background-image: url("img/banner/b1.jpg");
+    width:100%;
+    height: 50vh;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 90px;
+}
+#page-header h2,
+#page-header p{
+     color:white;
+    }
+
+
+#pagination{
+        text-align: center;
+    }
+
+#pagination a{
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+
+    }
+
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/*single prod */
+
+#prodetails {
+    display:flex;
+    margin-top: 10px;
+    
+    /* position: relative; */
+}
+
+#prodetails .single-pro-image {
+    width:40%;
+    margin-right: 50px;
+    /* box-shadow: 20px 20px 30px rgba(0,0,0,0.02); 
+    border: 1px solid #cce7d0; /* this gives a nice border of 1px of white color to our box*
+    border-radius:25px; */
+}
+
+/* #prodetails .single-pro-image:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.09);
+} */
+
+/* #MainImg{
+    border-radius: 25px;
+    width:430px;
+} */
+
+.small-img-group {
+    display:flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor:pointer;
+}
+
+#prodetails .single-pro-details {
+    width: 50%;
+    padding-top: 30px;
+}
+#prodetails .single-pro-details h4{
+    padding:40px 0 0px 0;
+}
+
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details select{
+    padding:5px 10px;
+    display: block;
+    margin-bottom: 0px;
+}
+
+#prodetails .single-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus{ 
+    outline:none;
+}
+
+#prodetails .single-pro-details button{
+    background-color: #088178;
+    color: #fff;
+}
+
+#prodetails .single-pro-details span{
+    line-height: 25px;
+}
+
+
+/********************** PRODUCT PAGE ************/
+
+#shopFeature {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-items: center;
+    /* justify-content: space-around; */
+    
+}
+
+#shopFeature .fe-box {
+    width:200px;
+    height: 150px;
+    text-align: center;
+    padding:5px 15px; /*top-bottom, left-right*/
+    /* box-shadow: 10px 10px 54px rgba(70,62,221,0.1); */
+    border: 1px solid saddlebrown;
+    border-radius: 7px;
+    margin-bottom: 40px;
+    /* margin:15px 15px; */
+}
+
+ #shopFeature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+  
+#shopFeature .fe-box img{
+    width:100%;
+    margin-bottom: 5px;
+}
+ 
+#shopFeature .fe-box h6{
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    /* padding: 9px 8px 6px 8px; */
+    line-height: 1;
+    border-radius: 4px;
+    color:#088178;
+    background-color: #fddde4;
+}
+
+
+/*********************** blog page ********************/
+
+#page-header.blog-header
+{
+    background-image: url(img/banner/b19.jpg);
+    height:40vh;
+}
+
+#blog
+{
+    padding: 150px 150px 0px 150px;
+
+}
+
+#blog .blog-box
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    /* position: relative; */
+    padding-bottom: 90px;
+}
+
+#blog .blog-img
+{
+    width: 50%;
+    margin-right: 40px;
+}
+
+#blog img
+{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#blog .blog-details
+{
+    width: 50%;
+    padding-left: 60px;
+}
+
+#blog .blog-details a 
+{
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+    /* position: relative; */
+    transition: 0.3s;
+}
+
+#blog .blog-details a::after
+{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: black;
+    /* position: absolute;
+    top: 4px;
+    right: -60px; */
+}
+
+#blog .blog-details a:hover
+{
+    color: #088178;
+}
+
+#blog .blog-box h1
+{
+    /* position: absolute;
+    top: -40px;
+    left: 0; */
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    /* z-index: -1; */
+}
+
+
+
+/********* About page ****/
+
+#page-header
+{
+    height: 500%;
+}
+
+#page-header.about-header
+{
+    background-image: url(img/about/banner.png);
+    height: 40vh;
+}
+
+#about-head
+{
+    display: flex;
+    align-items: center;
+}
+
+#about-head img
+{
+    width: 45%;
+    height: auto;
+}
+
+#about-head div
+{
+    padding-left: 40px;
+}
+
+#about-app
+{
+    text-align: center;
+}
+
+#about-app .video
+{
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+#about-app .video video
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+}
+
+/*****************CONTACT PAGE**************************/
+#contact-details{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details{
+    width:40%;
+}
+
+#contact-details .details span{
+    font-size: 12px;
+}
+
+#contact-details .details h2{
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3{
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+
+#contact-details .details li{
+    list-style: none;
+    display:flex;
+    padding:10px 0;
+}
+
+#contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+
+#contact-details .details li p{
+    margin:0;
+    font-size:14px;
+}
+
+#contact-details .map{
+    width:55%; 
+    height: 400px;
+}
+
+#contact-details .map iframe{
+    width:100%; 
+    height: 100%;
+}
+
+/**************************CART PAGE CSS***********************/
+#cart {
+    overflow-x:auto ;/*this is for medium screen devices wherein we add the scrollig feature*/
+}
+
+#cart table{
+    width:100%;
+    border-collapse: collapse; /*the white line above and below our first row is becoz of this prop*/
+    table-layout: fixed;
+    white-space: nowrap;
+}
+ 
+#cart table img {
+    width: 100px;
+}
+ 
+/*we are using this prop becoz we need to give a diff width for each of these*/
+#cart table td:nth-child(1){ /*this is for the cross button/icon to give*/
+    width: 100px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(2){ /*this is for the image section*/
+    width: 150px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(3){ /*for the product section where we specify name of product*/
+    width: 250px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(4), /*for price,quantity and sub-total section*/
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 150px;
+    text-align: center;
+}
+ 
+#cart table td:nth-child(5) input { /*this is for the quantity section we are giving a nice padding on each side*/
+                                   /*becoz the default size of the input tag is much more so we minimize that*/
+    width: 70px;
+    padding: 10px 5px 10px 15px;
+}
+ 
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none; /*to remove the border provided by table tag by default*/
+    border-right: none;
+} 
+ 
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase; /*to make all the text in uppercase*/
+    font-size: 13px;
+    padding: 18px 0;
+    /* padding-bottom: 20px; */
+}
+
+#cart table tbody tr td{
+    padding-top: 15px;
+}
+
+#cart table tbody td{
+    font-size: 13px;
+}
+
+#cart-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#coupon{
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+#coupon h3, 
+#subtotal h3{
+    padding-bottom: 15px;
+}
+
+#coupon select {
+    padding: 10px 20px;
+    outline:none;
+    width:40%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+
+#coupon button,
+#subtotal button{
+    background-color: #088178;
+    color:#fff;
+    padding: 12px 20px;
+}
+
+#subtotal{
+    width:50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    padding: 10px;
+    font-size: 13px;
+}

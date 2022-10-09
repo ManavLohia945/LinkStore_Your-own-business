@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkStore</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <section id="header">
+        <a href="index.html" class="logo">LinkStore</a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li> 
+                <div id="cart_number">
+                    0
+                </div>
+                <div class="wrapper">
+                    <input type="checkbox" id="btn" hidden>
+                    <label for="btn" class="menu-btn">
+                    <!-- <i class="fas fa-bars"></i>
+                    <i class="fas fa-shopping-cart"></i> -->
+            
+                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-times"></i>
+                    </label>        
+                    <nav id="sidebar">
+            
+                       <table class="tableClass" width="100%">
+                            <thead>
+                                <tr>
+                                    <td>Remove</td>
+                                    <td>Image</td>
+                                    <td>Product</td>
+                                    <td>Price</td>
+                                    <!-- <td>Quantity</td> -->
+                                </tr>
+                            </thead>
+                            <tbody id="addItem">
+                                
+                            </tbody>
+                        </table> 
+                        <br> 
+                        <br>
+                        <div id="Rupees">Total Rs.</div>
+                        <div id="cartAmount"></div>
+                        <button class="normal" id="payment">Checkout</button>
+                        <button class="normal" id="clearCart">Clear Cart</button>
+                    </nav>
+                 </div>
+            
+                <!--<li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>-->
+            </ul>
+        </div>
+
+        <div id="mobile"> <!-- this is for ipad screen devices to make website responsive -->
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header">
+       
+        <h2>#Stay Home</h2>
+        
+        <p>Save more with coupons & up to 70% off! </p>
+        
+    </section>
+
+    <!-- ##################################Jewellery ##########################-->
+     
+    <section id="product1" class="section-p1">
+        <h3>Gems from the earth, but worth so much more</h3> 
+        <!-- <p>For your inner diva</p> -->
+            <div class="pro-container"> <!-- parent div of pro1 since we have 8 products-->
+                <div class="pro">
+                    <img src="img/products/jewel/1.jpg" alt="" onclick="window.location.href='jewel_product.html'">
+                    <div class="description" onclick="window.location.href='jewel_product.html'">
+                        <span>Wear it</span>  <!-- jewel 1  -->
+                        <h5>Wood Couple Bracelet</h5>
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <span><h4>₹ <strong >159</strong></h4></span>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro">
+                    <img src="img/products/jewel/12.jpeg" alt="" onclick="window.location.href='jewel_product1.html'">
+                    
+                    <div class="description" onclick="window.location.href='jewel_product1.html'">
+                        <span>The Jewel Store</span>
+                        <h5>Sacred Geometric Earrings</h5> <!-- jewel 2  -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <span><h4>₹ <strong id="cart-item-price" class="cart-item-price">299</strong></h4></span>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro">
+                    <img src="img/products/jewel/3.jpg" alt="" onclick="window.location.href='jewel_product.html'">
+                    <div class="description" onclick="window.location.href='jewel_product.html'">
+                        <span>Wear it</span>
+                        <h5>Paisley Pop Ring</h5>   <!-- jewel 3 -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <h4>₹ 399</h4>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro" >
+                    <img src="img/products/jewel/4.jpeg" alt="" onclick="window.location.href='jewel_product1.html'">
+                    <div class="description" onclick="window.location.href='jewel_product1.html'">
+                        <span>The Jewel Store</span>
+                        <h5>Moonstone Jewelry Set</h5>  <!-- jewel 4 -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <h4>₹ 749</h4>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro" >
+                    <img src="img/products/jewel/5.jpeg" alt="" onclick="window.location.href='jewel_product1.html'">
+                    <div class="description" onclick="window.location.href='jewel_product1.html'">
+                        <span>The Jewel Store</span>
+                        <h5>Golden Necklace x 3</h5> <!-- jewel 5 -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <h4>₹ 249</h4>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro" >
+                    <img src="img/products/jewel/6.jpeg" alt="" onclick="window.location.href='jewel_product.html'">
+                    <div class="description" onclick="window.location.href='jewel_product.html'">
+                        <span>Wear it</span>
+                        <h5>Modern Rings x 5</h5> <!-- jewel 6 -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <h4>₹ 449</h4>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro" >
+                    <img src="img/products/jewel/9.jpeg" alt="" onclick="window.location.href='jewel_product1.html'">
+                    <div class="description" onclick="window.location.href='jewel_product1.html'">
+                        <span>The Jewel Store</span>
+                        <h5>Royal design Bracelets</h5>     <!-- jewel 7 -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <h4>₹ 449</h4>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+
+                <div class="pro" >
+                    <img src="img/products/jewel/8.jpg" alt="" onclick="window.location.href='jewel_product.html'">
+                    <div class="description" onclick="window.location.href='jewel_product.html'" >
+                        <span>Wear it</span>
+                        <h5>Blue and Golden Couple</h5> <!-- jewel 8 -->
+                        <div class="star">
+                            <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                            <i class="fas fa-star"></i> 
+                        </div>
+                        <h4>₹ 249</h4>
+                    </div>
+                    <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+                </div>
+    </section>
+
+    
+    <!-- ###################################  Caps ################################-->
+    
+    <section id="product2" class="section-p1">
+        <h3>May your hats fly as high as your dreams</h3> 
+        <div class="pro-container">
+            <div class="pro" >
+                <img src="img/products/caps/1.jpg" alt="" onclick="window.location.href='cap_product.html'">
+                <div class="description" onclick="window.location.href='cap_product.html'">
+                    <span>CAPtain</span>
+                    <h5>Black Punch Combo</h5>  <!-- caps 1 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 249</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/2.jpg" alt="" onclick="window.location.href='cap_product.html'">
+                <div class="description" onclick="window.location.href='cap_product.html'">
+                    <span>CAPtain</span>
+                    <h5>Partlands Printed Teal</h5>     <!-- caps 2 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 299</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/3.jpg" alt="" onclick="window.location.href='cap_product.html'">
+                <div class="description" onclick="window.location.href='cap_product.html'">
+                    <span>CAPtain</span>
+                    <h5>Walkie Printed Beidge</h5>     <!-- caps 3 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 229</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/4.jpg" alt="" onclick="window.location.href='cap_product.html'"> 
+                <div class="description" onclick="window.location.href='cap_product.html'">
+                    <span>CAPtain</span>
+                    <h5>Brown Cowboy Modern Fit</h5>    <!-- caps 4 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 349</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/6.jpg" alt="" onclick="window.location.href='cap_product1.html'">
+                <div class="description" onclick="window.location.href='cap_product1.html'">
+                    <span>Tipsy CAPs</span>
+                    <h5>Pink Mountain Design</h5>     <!-- caps 5 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 149</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/7.jpg" alt="" onclick="window.location.href='cap_product1.html'">
+                <div class="description" onclick="window.location.href='cap_product1.html'">
+                    <span>Tipsy CAPs</span>
+                    <h5>Modern Crew Cut</h5>     <!-- caps 6 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 199</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/8.jpg" alt="" onclick="window.location.href='cap_product1.html'">
+                <div class="description" onclick="window.location.href='cap_product1.html'">
+                    <span>Tipsy CAPs</span>
+                    <h5>Modern Plan White</h5>     <!-- caps 7 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 249</h4>
+                </div>
+                <span class="cartButtonChange">
+                    <i class="fas fa-shopping-cart cart fa-lg"></i>
+                </span>
+            </div>
+    
+            <div class="pro" >
+                <img src="img/products/caps/9.jpg" alt="" onclick="window.location.href='cap_product1.html'">
+                <div class="description" onclick="window.location.href='cap_product1.html'">
+                    <span>Tipsy CAPs</span>
+                    <h5>Vintage Cowboy</h5>     <!-- caps 8 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 299</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+        </div>
+    </section>
+            
+
+    <!--############################ BAGS ########################-->
+
+    <section id="product3" class="section-p1">
+        <h3>Love yourself, love your bag</h3> 
+        <div class="pro-container">
+            <div class="pro" >
+                <img src="img/products/bags/Brillant Mini Coliseum Box Calf Noir.jpeg" alt="" onclick="window.location.href='bag_product.html'">
+                <div class="description" onclick="window.location.href='bag_product.html'">
+                    <span>Taira bags</span>
+                    <h5>Sling Bag with Strap</h5> <!-- bags 1 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 549</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/LaCarrie Bag.jpeg" alt="" onclick="window.location.href='bag_product.html'">
+                <div class="description" onclick="window.location.href='bag_product.html'">
+                    <span>Taira bags</span>
+                    <h5>Hidesign sky blue</h5> <!-- bags 2 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 699</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/Mai Soli - Luxury Handbag Photography.png" alt="" onclick="window.location.href='bag_product.html'">
+                <div class="description" onclick="window.location.href='bag_product.html'">
+                    <span>Taira bags</span>
+                    <h5>Green Solid Matt Finish</h5> <!-- bags 3 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 749</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/Saint Laurent Cassandra Mini leather shoulder bag.jpeg" alt="" onclick="window.location.href='bag_product.html'">
+                <div class="description" onclick="window.location.href='bag_product.html'">
+                    <span>Taira bags</span>
+                    <h5>Tan punch luxury</h5> <!-- bags 4 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 999</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/Bea Hobo Bag.jpg" alt="" onclick="window.location.href='bag_product1.html'">
+                <div class="description" onclick="window.location.href='bag_product1.html'">
+                    <span>Bags by Shin</span>
+                    <h5>Modern Matt Finish</h5> <!-- bags 5 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 549</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/download.jpg" alt="" onclick="window.location.href='bag_product1.html'">
+                <div class="description" onclick="window.location.href='bag_product1.html'">
+                    <span>Bags by Shin</span>
+                    <h5>Aesthetic Finish Design</h5> <!-- bags 6 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 849</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/Bestselling Gifts.jpg" alt="" onclick="window.location.href='bag_product1.html'">
+                <div class="description" onclick="window.location.href='bag_product1.html'">
+                    <span>Bags by Shin</span>
+                    <h5>Rich Brown Handbag</h5> <!-- bags 7 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 549</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/bags/283e5ae2-6335-49c8-b487-3665ccf741b6.jpg" alt="" onclick="window.location.href='bag_product1.html'">
+                <div class="description" onclick="window.location.href='bag_product1.html'">
+                    <span>Bags by Shin</span>
+                    <h5>Deep Black Design</h5> <!-- bags 8 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 449</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+        </div>
+    </section>
+
+
+    <!--######################## KEYCHAINS #########################-->
+
+    <section id="product4" class="section-p1">
+        
+        <h3>The KEY that works will always be the last one you try</h3> 
+        <div class="pro-container">
+            <div class="pro" >
+                <img src="img/products/keychains/key1.jpg" alt="" onclick="window.location.href='key_product.html'">
+                <div class="description" onclick="window.location.href='key_product.html'">
+                    <span>Keychains By Blush</span>
+                    <h5>Golden Star Keychain</h5>     <!-- keyc 1 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 199</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key2.jpg" alt="" onclick="window.location.href='key_product.html'">
+                <div class="description" onclick="window.location.href='key_product.html'">
+                    <span>Keychains By Blush</span>
+                    <h5>Silver Camera Keychain</h5> <!-- keyc 2 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 399</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key3.jpg" alt="" onclick="window.location.href='key_product.html'">
+                <div class="description" onclick="window.location.href='key_product.html'">
+                    <span>Keychains By Blush</span>
+                    <h5>Flower Jar Keychain</h5> <!-- keyc 3 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 199</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key4.png" alt="" onclick="window.location.href='key_product.html'">
+                <div class="description" onclick="window.location.href='key_product.html'">
+                    <span>Keychains By Blush</span>
+                    <h5>Black moon Keychain</h5> <!-- keyc 4 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 299</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key5.jpg" alt="" onclick="window.location.href='key_product1.html'">
+                <div class="description" onclick="window.location.href='key_product1.html'">
+                    <span>Keychain Junction</span>
+                    <h5>Rainbow Keychain</h5>     <!-- keyc 5 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 189</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key6.jpg" alt="" onclick="window.location.href='key_product1.html'">
+                <div class="description" onclick="window.location.href='key_product1.html'">
+                    <span>Keychain Junction</span>
+                    <h5>Saturn star Keychain</h5>     <!-- keyc 6 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 199</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key7.jpg" alt="" onclick="window.location.href='key_product1.html'">
+                <div class="description">
+                    <span>Keychain Junction</span>
+                    <h5>Blue Butterflies Keychain</h5>     <!-- keyc 7 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 199</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+
+            <div class="pro" >
+                <img src="img/products/keychains/key8.png" alt="" onclick="window.location.href='key_product1.html'">
+                <div class="description" onclick="window.location.href='key_product1.html'">
+                    <span>Keychain Junction</span>
+                    <h5>Bluestone transparent </h5>     <!-- keyc 8 -->
+                    <div class="star">
+                        <i class="fas fa-star"></i> <!-- to add star icon from font awesome-->
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                        <i class="fas fa-star"></i> 
+                    </div>
+                    <h4>₹ 149</h4>
+                </div>
+                <span class="cartButtonChange">
+                        <i class="fas fa-shopping-cart cart fa-lg"></i>
+                    </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="pagination" class="section-p1">
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
+    </section> -->
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-Mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form action="">
+           
+            <input type="text" class="email" name="email" placeholder="Your email address" required>
+            <button class="normal1"> Sign Up</button>
+        </form>
+
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <a href="#" class="logo">LinkStore</a>
+            <h4>Contact</h4>
+            <p><strong>Address: </strong>562 Wellington Road, Street 32, Bangalore</p>
+            <p><strong>Phone: </strong>+91 7977170997/022 2266 1014</p>
+            <p><strong>Hours: </strong>10:00-18:00 ,Mon-Sat</p>
+             <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+             </div>
+        </div>
+
+        <div class="col">
+            <h4>About Us</h4>
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditons</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+    </footer>
+
+
+    
+    <!-- <script>
+        var sidebar = document.querySelector(".wrapper");
+        console.log(sidebar);
+    </script> -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("uQUWKu2Pa3Rd2X5mc")
+        })();
+    </script>
+
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script src="cartPage.js"></script>
+</body>
+</html>
