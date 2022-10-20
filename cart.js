@@ -208,7 +208,7 @@ console.log(clearCart);
 //                 </div>
 //                 <div class="right">
 //                     <h3>PAYMENT</h3>
-//                     <form action="">
+//                     <form action="razor.html">
 //                         <div id="amountToPay">
 
 //                         </div>
@@ -312,7 +312,7 @@ var changeBody4 = document.getElementById("product4");
             <div class="container">
                 <div class="left">
                     <h3>BILLING ADDRESS</h3>
-                    <form action="/razor.html">
+                    <form action="razor.html">
                         Full Name
                         <input type="text" name="" placeholder="Enter Name" required>
                         Email
@@ -336,7 +336,7 @@ var changeBody4 = document.getElementById("product4");
                             <input type="number" name="" id="" placeholder="Zip Code" required>
                             </label>
                         </div>
-                        <input style="text-align: center; margin-top: 5px; width:250px;" type="submit" value="Proceed to Payment">
+                        <a href="razor.html"><input style="text-align: center; margin-top: 5px; width:250px;" type="submit" value="Proceed to Payment"></a>
                     </form>
                     
                 </div>
