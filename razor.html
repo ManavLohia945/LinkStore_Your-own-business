@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <section id="header">
+        <a href="index.html" class="logo">LinkStore</a>
+        <!-- <div>
+            <ul id="navbar">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div> -->
+    </section> 
+    <section id="banner" style="height: 30vh;">
+        <h4>No-cost Delivery Powered by Dehlivery!!!</h4>
+        <h2>Save upto<span> 20% </span>on delivery charges</h2>
+        <!-- <a href="#"><button class="normal">Explore More</button></a> -->
+    </section>
+    <h1 style="text-align: center; margin-top: 20px;">Make payment!!!</h1>
+    <button  style="align-items:center; justify-content: center; margin: 20px 650px; width: 230px;" class="normal2" id="rzp-button1">Pay</button>
+
+    <!-- delivery banner -->
+    <div class="fe-box" style="text-align: center;">
+        <img src="img/features/return.jpg" alt="">
+    </div>
+
+    <div class="fe-box" style="text-align: center;">
+        <h6>Delivery Partner</h6>
+        <img src="img/features/delhivery.png" alt="">
+
+    </div>
+
+    <!-- newsletter banner -->
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign Up For Newsletter</h4>
+            <p>Get E-Mail updates about our latest shop and <span>special offers.</span></p>
+        </div>
+        <form action="">
+           
+            <input type="text" class="email" name="email" placeholder="Your email address" required>
+            <button class="normal1"> Sign Up</button>
+        </form>
+    
+    </section>
+    
+        <footer class="section-p1">
+            <div class="col">
+                <a href="#" class="logo">LinkStore</a>
+                <h4>Contact</h4>
+                <p><strong>Address: </strong>562 Wellington Road, Street 32, Bangalore</p>
+                <p><strong>Phone: </strong>+91 7977170997/022 2266 1014</p>
+                <p><strong>Hours: </strong>10:00-18:00 ,Mon-Sat</p>
+                <!-- <div class="follow">
+                    <h4>Follow us</h4>
+                    <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-pinterest-p"></i>
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                </div> -->
+            </div>
+    
+            <div class="col">
+                <h4>About Us</h4>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditons</a>
+                <a href="#">Contact Us</a>
+            </div>
+    
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Help</a>
+            </div>
+    
+            <div>
+                <p>Secured Payment Gateways</p>
+                <img src="img/pay/pay.png" alt="">
+            </div>
+    
+        </footer>
+
+    <!-- Code provided by razorpay API -->
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+    var options = {
+        "key": "rzp_test_V3wpBKVaZ43i0a", // Enter the Key ID generated from the Dashboard
+        "amount": "10000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+        "currency": "INR",
+        "name": "LinkStore",
+        "description": "Test Transaction",
+        "image": "https://example.com/your_logo",
+        "order_id": "order_KRHxa053qy7Rpk", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "handler": function (response){
+            alert(response.razorpay_payment_id);
+            alert(response.razorpay_order_id);
+            alert(response.razorpay_signature)
+        },
+        "prefill": {
+            "name": "Gaurav Kumar",
+            "email": "gaurav.kumar@example.com",
+            "contact": "9999999999"
+        },
+        "notes": {
+            "address": "Razorpay Corporate Office"
+        },
+        "theme": {
+            "color": "#3399cc"
+        }
+    };
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response){
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+    });
+    document.getElementById('rzp-button1').onclick = function(e){
+        rzp1.open();
+        e.preventDefault();
+    }
+    </script>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("0_DAC2LW6KGFh4TyB")
+        })();
+    </script>
+
+
+<script src="index.js"></script>
+</body>
+</html>

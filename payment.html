@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkStore</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+        <div class="container">
+            <div class="left">
+                <h3>BILLING ADDRESS</h3>
+                <form action="">
+                    Full Name
+                    <input type="text" name="" placeholder="Enter Name">
+                    Email
+                    <input type="text" name="" placeholder="Enter E-mail">
+                    Address
+                    <input type="text" name="" placeholder="Enter address">
+                    City
+                    <input type="text" name="" placeholder="Enter City">
+                    <div id="zip">
+                        <label>
+                            District
+                            <select name="" id="">
+                                <option value="null">Mumbai Suburban</option>
+                                <option value="Rajasthan">Mumbai City</option>
+                                <option value="Haryana">Thane</option>
+                            </select>
+                        </label>
+                        <label for="">Zip Code
+                        <input type="number" name="" id="" placeholder="Zip Code">
+                        </label>
+                    </div>
+                </form>
+            </div>
+            <div class="right">
+                <h3>PAYMENT</h3>
+                <form action="">
+                    Accepted Card
+                    <br>
+                    <img src="img\pay\pay.png" alt="">
+                    <br>
+                    <br>
+                    Credit Card Number
+                    <input type="text" name="" placeholder="Enter Credit Card Number">
+                    <!-- Expiry Month
+                    <input type="text" name="" placeholder="Enter City">
+                    Expiry Year
+                    <input type="text" name="" placeholder="Enter City"> -->
+                    <div id="zip">
+                        <label>
+                            Expiry Month
+                            <br>
+                            <select name="" id="">
+                                <option value="null">Choose Month</option>
+                                <option value="Rajasthan">2024</option>
+                                <option value="Haryana">2025</option>
+                                <option value="Haryana">2026</option>
+                            </select>
+                        </label>
+                        <label for="">
+                            Expiry Year
+                            <br>
+                            <select name="" id="">
+                                <option value="null">Choose Year</option>
+                                <option value="Rajasthan">2024</option>
+                                <option value="Haryana">2025</option>
+                                <option value="Haryana">2026</option>
+                            </select>       
+                        </label>
+                        <br>    
+                    </div>
+
+                    <div id="Amount">
+                        <label for="">Enter CVV
+                            <input type="number" name="" id="" placeholder="3 digit number">
+                            </label>
+                        <label for="">Enter Amount
+                            <input type="number" name="" id="" placeholder="Enter Amount">
+                            </label>
+                    </div>
+                    
+                </form>
+                <input type="submit" value="Proceed to Checkout">
+            </div>
+        </div>
+    
+</body>
+</html>
